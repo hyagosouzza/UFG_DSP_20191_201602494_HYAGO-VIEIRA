@@ -1,6 +1,0 @@
-Hello Learner !! Estamos na aula de DSP.
-Linha 0 adicionada ao arquivo
-Linha 1 adicionada ao arquivo
-Linha 2 adicionada ao arquivo
-Linha 3 adicionada ao arquivo
-Linha 4 adicionada ao arquivo
