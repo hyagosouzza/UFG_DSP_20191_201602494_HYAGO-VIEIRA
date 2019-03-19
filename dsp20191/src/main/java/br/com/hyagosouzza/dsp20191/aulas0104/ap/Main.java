@@ -8,10 +8,13 @@ public class Main {
 
         //Primeira parte, trabalhando com arquivo .txt
         Crud crud = new Crud("src/main/resources/samplefile.txt");
+
+        Write write = new Write("src/main/resources/samplefile.txt");
+
         try {
             crud.createFile();
             System.out.println("Arquivo simplefile.txt criado!\n");
-            crud.writeFile();
+            write.writeFile();
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Houve um erro ao criar o arquivo simplefile.txt");

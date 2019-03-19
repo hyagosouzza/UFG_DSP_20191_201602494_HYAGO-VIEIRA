@@ -29,25 +29,4 @@ public class Crud {
             System.out.println(line);
         }
     }
-
-    public void writeFile() {
-        List<String> records = new ArrayList<String>();
-        for (int i = 0; i < 5; i++) {
-            records.add(i, "Linha " + i + " adicionada ao arquivo");
-        }
-        try
-        {
-            for (String linha: records) {
-                this.bufferedWriter.newLine();
-                this.bufferedWriter.write(linha);
-            }
-            this.bufferedWriter.close();
-            readFile();
-        }
-        catch (Exception e)
-        {
-            System.err.format("Exception occurred trying to read '%s'.", filename);
-            e.printStackTrace();
-        }
-    }
 }
