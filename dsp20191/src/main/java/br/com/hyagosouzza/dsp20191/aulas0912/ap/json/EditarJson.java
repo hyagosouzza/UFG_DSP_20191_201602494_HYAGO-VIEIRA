@@ -22,7 +22,7 @@ public class EditarJson {
                     new FileReader("src/main/resources/students.json"));
             Faculdade faculdade = gson.fromJson(bufferedReader, Faculdade.class);
 
-            for (Student student : faculdade.getClasses().getStudents()){
+            for (Student student : faculdade.getClasses().getStudents()) {
                 if (student.getMatricula().equals("201602494")) {
                     List<Aula> aulas = student.getFrequencia().getAulas();
 

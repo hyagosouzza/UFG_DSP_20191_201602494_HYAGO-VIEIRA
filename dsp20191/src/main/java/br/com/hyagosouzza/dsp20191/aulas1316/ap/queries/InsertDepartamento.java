@@ -5,7 +5,7 @@ import br.com.hyagosouzza.dsp20191.aulas1316.ap.models.Departamento;
 
 public class InsertDepartamento extends PersistenciaJdbc {
 
-    public void insertDepartamento(Departamento departamento) throws Exception{
+    public void insertDepartamento(Departamento departamento) throws Exception {
 
         preparaPersistencia();
 

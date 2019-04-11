@@ -9,7 +9,7 @@ public class PersistenciaJdbc {
     protected CriaConexao criaConexao = new CriaConexao();
     protected String connectionType = "file";
 
-    protected void preparaPersistencia() throws Exception {
+    public void preparaPersistencia() throws Exception {
 
         //STEP 3: Open a connection
         connection = criaConexao.getConnection(connectionType);

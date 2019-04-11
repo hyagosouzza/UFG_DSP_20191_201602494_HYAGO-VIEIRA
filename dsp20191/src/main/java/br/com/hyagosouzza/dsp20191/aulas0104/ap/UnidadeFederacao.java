@@ -6,7 +6,6 @@ public class UnidadeFederacao {
     private String UFED_CODG_REGIAO;
 
 
-
     public UnidadeFederacao(String[] uf) {
         this.UFED_IDENUFED_SIGL = uf[1];
         this.UFED_NOME = uf[2];

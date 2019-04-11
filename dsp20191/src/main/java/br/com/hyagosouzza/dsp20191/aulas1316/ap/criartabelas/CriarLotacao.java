@@ -14,8 +14,12 @@ public class CriarLotacao extends PersistenciaJdbc {
                 "ID LONG NOT NULL PRIMARY KEY,\n" +
                 "DATA_INICIAL DATE NOT NULL,\n" +
                 "DATA_FINAL DATE NOT NULL,\n" +
-                "FOREIGN KEY (DEPARTAMENTO) REFERENCES DEPARTAMENTO(ID),\n" +
-                "CARGO VARCHAR(100) NOT NULL\n" +
+                "DEPARTAMENTO LONG NOT NULL,\n" +
+                "CARGO LONG NOT NULL,\n" +
+                "FUNCIONARIO LONG NOT NULL,\n" +
+                "FOREIGN KEY (DEPARTAMENTO) REFERENCES DEPARTAMENTOS(ID),\n" +
+                "FOREIGN KEY (CARGO) REFERENCES CARGOS(ID),\n" +
+                "FOREIGN KEY (FUNCIONARIO) REFERENCES FUNCIONARIOS(ID),\n" +
                 ")";
 
         stmt.executeUpdate(sql);

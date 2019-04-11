@@ -23,14 +23,14 @@ public class Csv {
 
             while ((linha = bufferedReader.readLine()) != null) {
 
-                if(i != 0) {
+                if (i != 0) {
                     UnidadeFederacao unidadeFederacao = new UnidadeFederacao(linha.split(csvDivisor));
                     ufs.add(unidadeFederacao);
                 } else System.out.println();
                 i++;
 
             }
-            for (UnidadeFederacao uf: ufs) {
+            for (UnidadeFederacao uf : ufs) {
                 System.out.println(uf.toString());
             }
 

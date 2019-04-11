@@ -33,32 +33,35 @@ public class Main {
 
         Random random = new Random();
         InsertDepartamento insertDepartamento = new InsertDepartamento();
-        InsertCargo insertCargo =  new InsertCargo();
+        InsertCargo insertCargo = new InsertCargo();
         InsertFuncionario insertFuncionario = new InsertFuncionario();
 
         ArrayList<Cargo> cargos = new ArrayList<Cargo>();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 2; i++) {
             cargos.add(new Cargo(random.nextLong(), "Cargo " + String.valueOf(i), random.nextDouble()));
         }
+        cargos.add(new Cargo((long)1, "Técnico Arquitetural", 2.000));
 
         ArrayList<Departamento> departamentos = new ArrayList<Departamento>();
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 3; i++) {
             departamentos.add(new Departamento(random.nextLong(), "Departamento " + String.valueOf(i)));
         }
+        departamentos.add(new Departamento((long)1, "Departamento de Arquitetura"));
 
         ArrayList<Funcionario> funcionarios = new ArrayList<Funcionario>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 9; i++) {
             funcionarios.add(new Funcionario(random.nextLong(), "Funcionário " + String.valueOf(i), random.nextLong()));
         }
+        funcionarios.add(new Funcionario((long)1, "Hyago", (long)201602494));
 
         try {
-            for (Cargo cargo: cargos) {
+            for (Cargo cargo : cargos) {
                 insertCargo.insertCargo(cargo);
             }
-            for (Departamento departamento: departamentos) {
+            for (Departamento departamento : departamentos) {
                 insertDepartamento.insertDepartamento(departamento);
             }
-            for (Funcionario funcionario: funcionarios) {
+            for (Funcionario funcionario : funcionarios) {
                 insertFuncionario.insertFuncionario(funcionario);
             }
 

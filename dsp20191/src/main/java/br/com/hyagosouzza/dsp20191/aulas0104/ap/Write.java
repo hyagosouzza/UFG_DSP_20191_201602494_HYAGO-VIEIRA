@@ -23,17 +23,14 @@ public class Write {
         for (int i = 0; i < 5; i++) {
             records.add(i, "Linha " + i + " adicionada ao arquivo");
         }
-        try
-        {
-            for (String linha: records) {
+        try {
+            for (String linha : records) {
                 this.bufferedWriter.newLine();
                 this.bufferedWriter.write(linha);
             }
             this.bufferedWriter.close();
             this.crud.readFile();
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             System.err.format("Exception occurred trying to read '%s'.", filename);
             e.printStackTrace();
         }

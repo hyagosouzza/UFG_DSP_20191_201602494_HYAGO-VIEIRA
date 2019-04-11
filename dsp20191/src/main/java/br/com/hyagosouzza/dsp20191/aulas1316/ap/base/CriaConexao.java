@@ -28,17 +28,17 @@ public class CriaConexao {
             Class.forName(JDBC_DRIVER);
 
             //STEP 2: Open a connection
-            if (!connectionType.equalsIgnoreCase("file") && !connectionType.equalsIgnoreCase("memory")){
+            if (!connectionType.equalsIgnoreCase("file") && !connectionType.equalsIgnoreCase("memory")) {
                 throw new InvalidDataBaseTypeException("O tipo do banco de dados deve ser [file] ou [memory].");
-            }else if (connectionType.equalsIgnoreCase("file")) {
+            } else if (connectionType.equalsIgnoreCase("file")) {
                 conn = DriverManager.getConnection(DB_FILE_URL, USER, PASS);
-            }else{
+            } else {
                 conn = DriverManager.getConnection(DB_MEMORY_URL, USER, PASS);
             }
-        }catch (SQLException se){
+        } catch (SQLException se) {
             //Handle errors for JDBC
             se.printStackTrace();
-        }catch (Exception e){
+        } catch (Exception e) {
             //Handle errors for Class.forName.
             e.printStackTrace();
         } //end try

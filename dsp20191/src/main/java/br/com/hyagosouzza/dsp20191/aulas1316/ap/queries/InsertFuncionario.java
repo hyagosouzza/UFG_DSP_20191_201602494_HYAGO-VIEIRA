@@ -5,7 +5,7 @@ import br.com.hyagosouzza.dsp20191.aulas1316.ap.models.Funcionario;
 
 public class InsertFuncionario extends PersistenciaJdbc {
 
-    public void insertFuncionario(Funcionario funcionario) throws Exception{
+    public void insertFuncionario(Funcionario funcionario) throws Exception {
 
         preparaPersistencia();
 

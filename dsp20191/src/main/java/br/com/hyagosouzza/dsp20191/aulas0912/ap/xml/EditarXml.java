@@ -31,7 +31,7 @@ public class EditarXml {
                 for (Node aula : aulas) {
                     if (node.selectSingleNode("matricula").getText().equals("201602494")) {
                         if (aula.valueOf("@numero").equals("0104")) {
-                            if(aula.getText().equals("P")) {
+                            if (aula.getText().equals("P")) {
                                 aula.setText("F");
                             } else {
                                 aula.setText("P");

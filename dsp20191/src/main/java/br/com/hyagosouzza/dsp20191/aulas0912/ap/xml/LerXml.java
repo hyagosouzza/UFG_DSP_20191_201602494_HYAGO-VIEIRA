@@ -17,7 +17,7 @@ public class LerXml {
         try {
             File inputFile = new File("src/main/resources/students.xml");
             SAXReader reader = new SAXReader();
-            Document document = reader.read( inputFile );
+            Document document = reader.read(inputFile);
 
             System.out.println("Lendo XML... \n");
 
@@ -43,7 +43,7 @@ public class LerXml {
                 System.out.println();
             }
 
-            for(Node node : nodes) {
+            for (Node node : nodes) {
                 if (node.selectSingleNode("matricula").getText().equals("201602494")) {
                     gerarArquivoXml(node);
                     editAula0104InXml();

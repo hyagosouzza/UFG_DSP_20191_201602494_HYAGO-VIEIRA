@@ -36,11 +36,11 @@ public class Main {
         try {
             DataInputStream dataInputStream = new DataInputStream(new FileInputStream("src/main/resources/avaliacao.dat"));
 
-            while(dataInputStream.available() > 0) {
+            while (dataInputStream.available() > 0) {
                 String linha = dataInputStream.readUTF();
                 String atributos[] = linha.split(",");
                 String resultado;
-                if((Double.parseDouble(atributos[2]) + Double.parseDouble(atributos[3])) / 2 >= 5.0) {
+                if ((Double.parseDouble(atributos[2]) + Double.parseDouble(atributos[3])) / 2 >= 5.0) {
                     resultado = " foi Aprovado \n";
                 } else {
                     resultado = " foi Reprovado \n";

@@ -5,7 +5,7 @@ import br.com.hyagosouzza.dsp20191.aulas1316.ap.models.Cargo;
 
 public class InsertCargo extends PersistenciaJdbc {
 
-    public void insertCargo(Cargo cargo) throws Exception{
+    public void insertCargo(Cargo cargo) throws Exception {
 
         preparaPersistencia();
 

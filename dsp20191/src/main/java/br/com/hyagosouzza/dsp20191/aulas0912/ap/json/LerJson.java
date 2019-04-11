@@ -24,7 +24,7 @@ public class LerJson {
                     new FileReader("src/main/resources/students.json"));
             Faculdade faculdade = gson.fromJson(bufferedReader, Faculdade.class);
             System.out.println(faculdade.getClasses());
-            for (Student student : faculdade.getClasses().getStudents()){
+            for (Student student : faculdade.getClasses().getStudents()) {
                 if (student.getMatricula().equals("201602494")) {
                     System.out.println("------------------------");
                     System.out.println(student.getMatricula());
@@ -37,8 +37,7 @@ public class LerJson {
                     }
                     System.out.println("------------------------");
                     posicao = i;
-                }
-                else {
+                } else {
                     i++;
                 }
             }
